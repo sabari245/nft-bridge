@@ -36,7 +36,8 @@ const localnet: Chain = {
 
 // wallet configuration
 const chains = [arbitrum, mainnet, polygon, localhost, localnet];
-const projectId = "<use your project id>"; // TODO: update project ID
+const projectId =
+  process.env.PROJECT_ID !== undefined ? process.env.PROJECT_ID : "";
 
 const { publicClient } = configureChains(chains, [w3mProvider({ projectId })]);
 const wagmiConfig = createConfig({
