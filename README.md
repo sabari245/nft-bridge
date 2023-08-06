@@ -1,6 +1,8 @@
 # Web 3 Starter kit
 
-This project is a starter kit for simple web3 projects. I contains a custom deploy script that write the address and abi to `/frontend/src/components/interface.json`.
+This project is a starter kit for simple web3 projects. I contains a custom deploy script that write the address and abi to `/frontend/src/components/interface.json`. It also contains a simple storage smart contract
+
+This is done as a part of **intermediate EVM course** in metacrafters
 
 It also contains a frontend folder made with next js and it uses web3modal, wagmi and viem to communicate with the blockchain
 
