@@ -9,7 +9,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "hardhat test --network localhost",
+    "deploy": "hardhat run scripts/deploy.ts --network localhost",
+    "node": "hardhat node"
   },
   "keywords": [],
   "author": "",
