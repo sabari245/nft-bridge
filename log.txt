@@ -1,0 +1,28 @@
+created the images of NFTs needed for uploading
+
+the smart contract wallet's get the metadata of each NFT from the tokenURI() function.
+
+here is the format of NFT Metadata:
+{
+   "name": "name it",
+   "image": "ipfs://QmR36VFfo1hH2RAwVs4zVJ5btkopGip5cW7ydY4jUQBrKW",
+   "description": "description",
+   "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "value"
+        },
+] }
+
+tomorrow's work:
+
+* upload the images to the IPFS or pinata or whatever
+* update the smart contract 
+    * map the tokenId to tokenURI
+    * the tokenURI should respond with the json
+    * map tokenId to prompt
+    * create the function to respond with the prompt when passed in the tokenId
+* create deployment script
+* check if the deployment is done properly
+* learn about bridging and learn about implementing those functions as well
+
