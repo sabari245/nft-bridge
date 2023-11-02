@@ -1,7 +1,7 @@
 import { ethers } from "hardhat";
 import { writeFileSync } from "fs"
 
-const OUTPUT_FILE = "./frontend/src/components/interface.json"
+const OUTPUT_FILE = "./interface.json"
 
 async function main() {
   const currentTimestampInSeconds = Math.round(Date.now() / 1000);
@@ -10,7 +10,7 @@ async function main() {
   // const lockedAmount = ethers.parseEther("0.001");
   // const [owner] = await ethers.getSigners()
 
-  const Storage = await ethers.deployContract("Storage");
+  const Storage = await ethers.deployContract("CuteNFT", ["CUTIE", "CTE"]);
 
   const storageInstance = await Storage.waitForDeployment();
 
