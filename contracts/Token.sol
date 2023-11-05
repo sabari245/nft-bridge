@@ -15,12 +15,24 @@ contract CuteNFT is ERC721A, Ownable {
         string memory symbol
     ) ERC721A(name, symbol) Ownable(msg.sender) {}
 
+    function setURI(string memory uri, uint256 tokenId) public {
+        if (!_exists(tokenId)) revert URIQueryForNonexistentToken();
+
+        nftURI[tokenId] = uri;
+    }
+
     function tokenURI(
         uint256 tokenId
     ) public view virtual override returns (string memory) {
         if (!_exists(tokenId)) revert URIQueryForNonexistentToken();
 
         return nftURI[tokenId];
+    }
+
+    function setPrompt(string memory prmpt, uint256 tokenId) public {
+        if (!_exists(tokenId)) revert URIQueryForNonexistentToken();
+
+        nftPrompt[tokenId] = prmpt;
     }
 
     function prompt(uint256 tokenId) public view returns (string memory) {
